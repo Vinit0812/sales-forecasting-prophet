@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Forecast</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2>📈 Sales Forecast Dashboard</h2>
+
+    <label for="capSelect">Select Cap_ID:</label>
+    <select id="capSelect"></select>
+    <button onclick="fetchForecast()">Get Forecast</button>
+
+    <canvas id="forecastChart" width="800" height="400"></canvas>
+
+    <script src="{{ url_for('static', filename='ui.js') }}"></script>
+</body>
+</html>
