@@ -15,7 +15,6 @@ def load_blueprints_from_folder(app, folder):
 
             for attr in dir(module):
                 obj = getattr(module, attr)
-                # Only register if it is a Flask Blueprint instance
                 if isinstance(obj, Blueprint):
                     try:
                         app.register_blueprint(obj, url_prefix="/api")
